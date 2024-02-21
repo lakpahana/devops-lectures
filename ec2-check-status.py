@@ -5,7 +5,3 @@ def lambda_handler(event, context):
     ec2 = boto3.client('ec2')
     response = ec2.describe_instances()
     print(response)
-    return {
-        'statusCode': 200,
-        'body': json.dumps('Hello from Lambda!')
-    }
